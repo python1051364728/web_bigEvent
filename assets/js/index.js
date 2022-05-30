@@ -22,7 +22,7 @@ const renderAvatar = (user) => {
     // 按需渲染头像
     if (user.user_pic !== null) {
         // 把头像渲染上去
-        $('.layui-nav-img').attr('stc', user.user_pic)
+        $('.layui-nav-img').attr('src', user.user_pic)
         // 文字头像隐藏
         $('.text-avatar').hide();
     } else {
