@@ -7,6 +7,7 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem("token"),
         // },
         success: function (res) {
+            if (res.status !== 0) return layui.layer.msg("数据请求失败！");
             renderAvatar(res.data);
             // console.log(res);
         }
@@ -33,7 +34,7 @@ const renderAvatar = (user) => {
 }
 
 // 退出登录
-$("#loginout").click(() => {
+$("#btnLogout").click(() => {
     layui.layer.confirm(
         "确定退出登录？",
         { icon: 3, title: "" },
